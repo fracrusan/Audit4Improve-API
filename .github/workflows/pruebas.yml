@@ -34,7 +34,11 @@ jobs:
       GITHUB_PACKAGES: ${{ secrets.GITHUB_TOKEN }}
       GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
    steps:
+   - name: Clonando el repositorio y estableciendo el espacio de trabajo
+     uses: actions/checkout@v3
    - name: Probando el codigo
-     run: ./gradlew testClasses
+     run: |
+          chmod +x gradlew
+          ./gradlew testClasses
      
    
