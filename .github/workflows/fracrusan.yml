@@ -4,7 +4,7 @@ on:
     types: [opened, edited, milestoned, demilestoned]
   project_card:
     types: [moved]
-   workflow_dispatch:
+  workflow_dispatch:
 jobs:
   notificar:
     name: Notificacion en telegram
