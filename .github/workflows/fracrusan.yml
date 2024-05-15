@@ -1,0 +1,25 @@
+name: fracrusan
+
+on:
+  issues:
+    types: [opened, edited, milestoned, demilestoned]
+  project_card:
+    types: [moved]
+   workflow_dispatch:
+jobs:
+  notificar:
+    name: Notificacion en telegram
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Mostrar contexto GitHub
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+
+    - name: Send Telegram notification
+      uses: appleboy/telegram-notify@master
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        message: "Se ha activado el flujo de trabajo para fracrusan"
