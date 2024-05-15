@@ -22,7 +22,19 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '16'
-      - name: Construyendo y probando el código
+      - name: Construyendo  el código
         run: |
           chmod +x gradlew        
-          ./gradlew build
+          ./gradlew assemble
+  test:
+   runs-on: ubuntu-latest
+   needs: Build
+   env:
+      GITHUB_LOGIN: ${{ github.actor }}
+      GITHUB_PACKAGES: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+   steps:
+   - name: Probando el codigo
+     run: ./gradlew testClasses
+     
+   
