@@ -71,6 +71,12 @@
 			"type": "java.lang.Double",
 			"description": "Ratio de issues abiertos frente a cerrados",
 			"unit": "ratio"
+		},
+		{
+			"name": "rendimientoMiembro",
+			"type": "java.lang.Double",
+			"description": "Ratio del rendimiento de un desarrollador en el último mes, en comparación con el resto del equipo",
+			"unit": "ratio"
 		}
 	]
 }
