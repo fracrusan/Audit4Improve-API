@@ -52,6 +52,30 @@
 			"type": "java.lang.Double",
 			"description": "Numero de issues cerradas",
 			"unit": "issues"
+		},
+		{
+			"name": "createsIssuesMes",
+			"type": "java.lang.Double",
+			"description": "Numero de issues creadas en el ultimo mes",
+			"unit": "issues"
+		},
+		{
+			"name": "closedIssuesMes",
+			"type": "java.lang.Double",
+			"description": "Numero de issues cerradas en el ultimo mes",
+			"unit": "issues"
+		},
+		{
+			"name": "closedDevIssuesMes",
+			"type": "java.lang.Double",
+			"description": "Promedio de issues cerradas por miembro activo del equipo en el último mes",
+			"unit": "issues"
+		},
+		{
+			"name": "assignedDevIssuesMes",
+			"type": "java.lang.Double",
+			"description": "Total de Issues asignadas a cada miembro del equipo en el último mes",
+			"unit": "issues"
 		}
 	],
 	"indicators": [{
